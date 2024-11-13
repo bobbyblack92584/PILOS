@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   Responsive chart sizing ([#1536], [#1537])
 -   Wrong setting values shown for expert settings in room type change confirmation modal when expert mode is disabled ([#1495])
+-   Wrong icon and tooltip for participant count ([68c72ce](https://github.com/THM-Health/PILOS/commit/68c72ce573fe9ea9dbabca82792977faa587daf6))
+-   Missing info toast after browser notification has been granted on request ([0b92d86](https://github.com/THM-Health/PILOS/commit/0b92d86f3d6a3138dcd19ddac57b5e43b592014c))
+-   Wrong file size computation in admin UI ([8b1e5c6](https://github.com/THM-Health/PILOS/commit/8b1e5c68a40de3455d12df2c57dd14aead03fa0c))
+-   Line-break in App Banner and room terms of use ([345de45](https://github.com/THM-Health/PILOS/commit/345de458ed4a6cd87b1adfe13c8392cf02500d6f))
 
 ## [v4.1.0] - 2024-10-17
 

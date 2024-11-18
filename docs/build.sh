@@ -9,9 +9,9 @@ TAGS=()
 
 # Build the docs only for these release branches
 BRANCHES=(
-  master
   2.x
   3.x
+  4.x
 )
 REMOTE="origin"
 
@@ -45,14 +45,9 @@ for branch in "${BRANCHES[@]}"; do
 
   git checkout "$branch"
   if [ -f docusaurus.config.js ]; then
-    # If branch name is master, use 4.x as version
-    if [ "$branch" == "master" ]; then
-      version="v4"
-    else
-      # Otherwise, name version as the branch name
-      majorVersion=$(echo "$branch" | cut -d. -f1)
-      version=v${majorVersion}
-    fi
+    # Name version as the branch name
+    majorVersion=$(echo "$branch" | cut -d. -f1)
+    version=v${majorVersion}
 
     echo "Adding documentation for $version"
     npm run docusaurus docs:version "${version}"

@@ -13,23 +13,38 @@ BRANCHES=(
   3.x
   4.x
 )
+
+LAST_VERSION=4.x
+
 REMOTE="origin"
 
 git fetch --all
 git fetch --tags
-current_branch=$(git rev-parse --abbrev-ref HEAD)
+origin=$(git config --get remote.origin.url)
+current_path=$(pwd)
+
+rm -rf temp_versioned_docs
+mkdir -p temp_versioned_docs
+git clone "$origin" temp_versioned_docs
 
 for tag in "${TAGS[@]}"; do
 
-  if [ "$tag" != "$current_branch" ]; then
-    git fetch "$REMOTE" "$tag"
-  fi
+  cd "$current_path"
+  cd temp_versioned_docs
 
   git checkout "$tag"
-  if [ -f docusaurus.config.js ]; then
+  if [ -f docs/docusaurus.config.js ]; then
     majorVersion=$(echo "$tag" | cut -d. -f1)
     version=v${majorVersion}
+
     echo "Adding documentation for $version"
+
+    cd "$current_path"
+
+    rm -rf docs sidebars.json
+    cp -r temp_versioned_docs/docs/docs .
+    cp -r temp_versioned_docs/docs/sidebars.js .
+
     npm run docusaurus docs:version "${version}"
   else
     echo "Warning: branch/tag ${version} does not contain a docusaurus.config.js!"
@@ -38,23 +53,36 @@ for tag in "${TAGS[@]}"; do
 done
 
 for branch in "${BRANCHES[@]}"; do
-
-  if [ "$branch" != "$current_branch" ]; then
-    git fetch "$REMOTE" "$branch":"$branch"
-  fi
+  cd "$current_path"
+  cd temp_versioned_docs
 
   git checkout "$branch"
-  if [ -f docusaurus.config.js ]; then
+  if [ -f docs/docusaurus.config.js ]; then
     # Name version as the branch name
     majorVersion=$(echo "$branch" | cut -d. -f1)
     version=v${majorVersion}
 
     echo "Adding documentation for $version"
+
+    cd "$current_path"
+
+    rm -rf docs sidebars.json
+    cp -r temp_versioned_docs/docs/docs .
+    cp -r temp_versioned_docs/docs/sidebars.js .
+
     npm run docusaurus docs:version "${version}"
   else
     echo "Warning: branch ${branch} does not contain a docusaurus.config.js!"
   fi
 
 done
+cd "$current_path"
 
-git checkout "$current_branch"
+# Cleanup
+rm -rf temp_versioned_docs
+
+# Return to the original branch
+git reset --hard HEAD
+
+# Edit docusaurus.config.js lastVersion to the last version
+sed -i 's/lastVersion: "current"/lastVersion: "'"${LAST_VERSION}"'"/g' docusaurus.config.js

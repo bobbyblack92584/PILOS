@@ -14,7 +14,7 @@ BRANCHES=(
   4.x
 )
 
-LAST_VERSION=4.x
+LAST_VERSION=v4
 
 REMOTE="origin"
 

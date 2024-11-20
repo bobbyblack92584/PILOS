@@ -1,6 +1,6 @@
 import { interceptIndefinitely } from "../support/utils/interceptIndefinitely.js";
 
-describe("Rooms view members bulk", function () {
+describe("Rooms view members bulk actions", function () {
   beforeEach(function () {
     cy.init();
     cy.interceptRoomViewRequests();
@@ -17,7 +17,7 @@ describe("Rooms view members bulk", function () {
     cy.get('[data-test="room-members-bulk-edit-dialog"]').should("not.exist");
 
     // Check that no user is selected and select first and second user
-    cy.get('[data-test="room-member-item').should("have.length", 3);
+    cy.get('[data-test="room-member-item"]').should("have.length", 3);
     cy.get('[data-test="room-member-item"]')
       .eq(0)
       .find("input")
@@ -411,7 +411,7 @@ describe("Rooms view members bulk", function () {
 
     // Check with 1 user
     // Check that no user is selected and select first user
-    cy.get('[data-test="room-member-item').should("have.length", 3);
+    cy.get('[data-test="room-member-item"]').should("have.length", 3);
     cy.get('[data-test="room-member-item"]')
       .eq(0)
       .find("input")

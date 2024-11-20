@@ -65,7 +65,9 @@ describe("Rooms view description", function () {
     cy.get('[data-test="room-description-edit-button"]').should("not.exist");
 
     // Check for co_owner
-    cy.intercept("GET", "api/v1/currentUser", { fixture: "currentUser.json" });
+    cy.intercept("GET", "api/v1/currentUser", {
+      fixture: "currentUser.json",
+    });
 
     cy.fixture("room.json").then((room) => {
       room.data.owner = { id: 2, name: "Max Doe" };
@@ -253,6 +255,10 @@ describe("Rooms view description", function () {
 
     cy.get(".tiptap").type("{selectall}");
 
+    cy.get('[data-test="tip-tap-menu-dropdown-item-button"]').should(
+      "have.length",
+      0,
+    );
     cy.get('[data-test="tip-tap-text-type-dropdown"]').click();
     cy.get('[data-test="tip-tap-menu-dropdown-item-button"]').should(
       "have.length",
@@ -277,6 +283,11 @@ describe("Rooms view description", function () {
 
     cy.get('[data-test="tip-tap-menu-dropdown-item-button"]').eq(0).click();
 
+    cy.get('[data-test="tip-tap-menu-dropdown-item-button"]').should(
+      "have.length",
+      0,
+    );
+
     // Check that description was changed correctly
     cy.get(".tiptap")
       .should("be.visible")
@@ -286,7 +297,15 @@ describe("Rooms view description", function () {
       });
 
     cy.get(".tiptap").type("{selectall}");
-    cy.get('[data-test="tip-tap-bold-button"]').click();
+    cy.get('[data-test="tip-tap-bold-button"]')
+      .should("be.visible")
+      .and("have.class", "p-button-secondary")
+      .and("have.attr", "data-p-severity", "secondary")
+      .click();
+    cy.get('[data-test="tip-tap-bold-button"]')
+      .should("be.visible")
+      .and("have.class", "p-button-primary")
+      .and("have.attr", "data-p-severity", "primary");
 
     // Check that description was changed correctly
     cy.get(".tiptap")

@@ -7,8 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+-   Add frontend tests for Room Recordings Tab ([#1150], [#1549])
+-   Add frontend tests for Room Browser Notifications ([#1150], [#1549])
+-   Add frontend tests for Room History Tab ([#1150], [#1549])
+-   Add frontend tests for Room Personalized Links / Room Tokens Tab ([#1150], [#1549])
+
 ### Changed
 
+-   Improve current frontend tests ([#1150], [#1549])
 -   OpenSans as application font ([#1558], [#1569])
 
 ### Fixed
@@ -238,6 +246,7 @@ You can find the changelog for older versions there [here](https://github.com/TH
 [#1536]: https://github.com/THM-Health/PILOS/issues/1536
 [#1537]: https://github.com/THM-Health/PILOS/pull/1537
 [#1548]: https://github.com/THM-Health/PILOS/pull/1548
+[#1549]: https://github.com/THM-Health/PILOS/pull/1549
 [#1558]: https://github.com/THM-Health/PILOS/issues/1558
 [#1559]: https://github.com/THM-Health/PILOS/issues/1559
 [#1561]: https://github.com/THM-Health/PILOS/pull/1561

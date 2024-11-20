@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+-   Meeting retention cleanup not working with server retention set to unlimited ([878ce6b](https://github.com/THM-Health/PILOS/commit/878ce6b3a3aa596fb6cf228150ffe047a1c94641))
+
 ## [v4.1.1] - 2024-11-20
 
 ### Added

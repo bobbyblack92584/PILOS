@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v4.1.2] - 2024-11-22
+
 ### Added
 
 -   Logging for server health changes ([#1608])

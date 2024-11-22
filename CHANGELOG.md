@@ -24,10 +24,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   Add frontend tests for Room Recordings Tab ([#1150], [#1549])
--   Add frontend tests for Room Browser Notifications ([#1150], [#1549])
--   Add frontend tests for Room History Tab ([#1150], [#1549])
--   Add frontend tests for Room Personalized Links / Room Tokens Tab ([#1150], [#1549])
+-   Frontend tests for Room Recordings Tab ([#1150], [#1549])
+-   Frontend tests for Room Browser Notifications ([#1150], [#1549])
+-   Frontend tests for Room History Tab ([#1150], [#1549])
+-   Frontend tests for Room Personalized Links / Room Tokens Tab ([#1150], [#1549])
 
 ### Changed
 

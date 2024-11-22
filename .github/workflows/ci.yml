@@ -9,6 +9,7 @@ on:
 
 env:
   PHP_VERSION: 8.3
+  CYPRESS_PROJECT_ID: w8t3fx
 
 jobs:
   backend:
@@ -248,7 +249,7 @@ jobs:
           record: true
           tag: ${{ github.event_name }}
         env:
-          CYPRESS_PROJECT_ID: ${{ vars.CYPRESS_PROJECT_ID }}
+          CYPRESS_PROJECT_ID: ${{ env.CYPRESS_PROJECT_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
@@ -309,7 +310,7 @@ jobs:
           tag: ${{ github.event_name }}
           project: ./tests/System
         env:
-          CYPRESS_PROJECT_ID: ${{ vars.CYPRESS_PROJECT_ID }}
+          CYPRESS_PROJECT_ID: ${{ env.CYPRESS_PROJECT_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}

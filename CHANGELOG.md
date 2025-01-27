@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Inconsistent select/multiselect loading states ([#1772])
 - Input fields not disabled correctly on login page ([#1791], [#1794])
 - Style of 'clear' button of the room replacement selector in the 'Delete room type' dialog ([#1784], [#1787])
+- Missing form validation feedback for password fields on login page ([#1801])
 - Missing form validation feedback on forgot password page ([#1802])
 - Room limit radio on edit roles page not reset on stale error ([#1824], [#1825])
 
@@ -354,6 +355,7 @@ You can find the changelog for older versions there [here](https://github.com/TH
 [#1787]: https://github.com/THM-Health/PILOS/pull/1787
 [#1791]: https://github.com/THM-Health/PILOS/issues/1791
 [#1794]: https://github.com/THM-Health/PILOS/pull/1794
+[#1801]: https://github.com/THM-Health/PILOS/pull/1801
 [#1802]: https://github.com/THM-Health/PILOS/pull/1802
 [#1824]: https://github.com/THM-Health/PILOS/issues/1824
 [#1825]: https://github.com/THM-Health/PILOS/pull/1825

@@ -44,7 +44,7 @@
         </div>
       </template>
       <template #tag="{ option, remove }">
-        <Chip :label="option.name">
+        <Chip :label="option.name" data-test="role-chip">
           <span>{{ option.name }}</span>
           <Button
             v-if="
@@ -56,6 +56,7 @@
             class="h-5 w-5 rounded-full text-sm"
             icon="fas fa-xmark"
             :aria-label="$t('admin.users.remove_role', { name: option.name })"
+            data-test="remove-role-button"
             @click="remove(option)"
           />
         </Chip>
@@ -68,6 +69,7 @@
             outlined
             icon="fa-solid fa-arrow-left"
             :label="$t('app.previous_page')"
+            data-test="previous-page-button"
             @click="loadRoles(Math.max(1, currentPage - 1))"
           />
           <Button
@@ -76,6 +78,7 @@
             outlined
             icon="fa-solid fa-arrow-right"
             :label="$t('app.next_page')"
+            data-test="next-page-button"
             @click="loadRoles(currentPage + 1)"
           />
         </div>

@@ -2,7 +2,7 @@
   <div>
     <div class="mb-6 flex flex-col justify-between md:flex-row">
       <div>
-        <InputGroup>
+        <InputGroup data-test="room-type-search">
           <InputText
             v-model="nameSearch"
             :disabled="isBusy"
@@ -25,6 +25,7 @@
         as="router-link"
         icon="fa-solid fa-plus"
         :to="{ name: 'admin.room_types.new' }"
+        data-test="room-types-add-button"
       />
     </div>
 
@@ -111,6 +112,7 @@
                 params: { id: slotProps.data.id },
               }"
               icon="fa-solid fa-eye"
+              data-test="room-types-view-button"
             />
             <Button
               v-if="userPermissions.can('update', slotProps.data)"
@@ -128,6 +130,7 @@
                 params: { id: slotProps.data.id },
               }"
               icon="fa-solid fa-edit"
+              data-test="room-types-edit-button"
             />
             <SettingsRoomTypesDeleteButton
               v-if="userPermissions.can('delete', slotProps.data)"

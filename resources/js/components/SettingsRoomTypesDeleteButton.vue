@@ -72,6 +72,7 @@
           severity="secondary"
           icon="fa-solid fa-sync"
           :aria-label="$t('app.reload')"
+          data-test="replacement-room-types-reload-button"
           @click="loadReplacementRoomTypes()"
         />
       </InputGroup>
@@ -85,12 +86,14 @@
         :label="$t('app.no')"
         :disabled="isBusy"
         severity="secondary"
+        data-test="dialog-cancel-button"
         @click="modalVisible = false"
       />
       <Button
         :label="$t('app.yes')"
         severity="danger"
         :loading="isBusy"
+        data-test="dialog-continue-button"
         @click="deleteRoomType"
       />
     </template>

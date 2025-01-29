@@ -5,11 +5,13 @@
         <InputGroup>
           <InputText
             v-model="nameSearch"
+            :disabled="isBusy"
             :placeholder="$t('app.search')"
             @keyup.enter="filters['name'].value = nameSearch"
           />
           <Button
             v-tooltip="$t('app.search')"
+            :disabled="isBusy"
             :aria-label="$t('app.search')"
             icon="fa-solid fa-magnifying-glass"
             severity="primary"
@@ -36,7 +38,7 @@
       :current-page-report-template="paginator.getCurrentPageReportTemplate()"
       striped-rows
       row-hover
-      :loading="isBusy"
+      :loading="isBusy || loadingError"
       :rows="settingsStore.getSetting('general.pagination_page_size')"
       :pt="{
         table: 'table-auto lg:table-fixed',
@@ -64,6 +66,9 @@
         },
       }"
     >
+      <template #loading>
+        <LoadingRetryButton :error="loadingError" @reload="loadData()" />
+      </template>
       <template #empty>
         <InlineNote v-if="roomTypes.length === 0">{{
           $t("admin.room_types.no_data")
@@ -157,6 +162,7 @@ const actionColumn = useActionColumn([
 ]);
 
 const isBusy = ref(false);
+const loadingError = ref(false);
 const roomTypes = ref([]);
 const nameSearch = ref("");
 const filters = ref({
@@ -172,6 +178,8 @@ onMounted(() => {
  */
 function loadData() {
   isBusy.value = true;
+  loadingError.value = false;
+
   api
     .call("roomTypes")
     .then((response) => {
@@ -179,6 +187,7 @@ function loadData() {
     })
     .catch((error) => {
       api.error(error);
+      loadingError.value = true;
     })
     .finally(() => {
       isBusy.value = false;

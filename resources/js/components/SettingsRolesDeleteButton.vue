@@ -16,7 +16,7 @@
     :breakpoints="{ '575px': '90vw' }"
     :close-on-escape="!isBusy"
     :dismissable-mask="!isBusy"
-    :closeable="!isBusy"
+    :closable="!isBusy"
     :draggable="false"
   >
     <span>
@@ -25,6 +25,7 @@
     <template #footer>
       <Button
         :label="$t('app.no')"
+        :disabled="isBusy"
         severity="secondary"
         @click="modalVisible = false"
       />

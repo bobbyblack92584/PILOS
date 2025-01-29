@@ -29,7 +29,7 @@
       </div>
     </div>
     <OverlayComponent :show="isBusy || modelLoadingError">
-      <template #loading>
+      <template #overlay>
         <LoadingRetryButton
           :error="modelLoadingError"
           @reload="loadRoomType"
@@ -135,7 +135,7 @@
                   :searchable="false"
                   :internal-search="false"
                   :clear-on-select="false"
-                  :close-on-select="false"
+                  :close-on-select="true"
                   :show-no-results="false"
                   :show-labels="false"
                   :options="serverPools"
@@ -190,6 +190,7 @@
                   severity="secondary"
                   outlined
                   icon="fa-solid fa-sync"
+                  :aria-label="$t('app.reload')"
                   @click="loadServerPools(serverPoolsCurrentPage)"
                 />
               </InputGroup>
@@ -695,7 +696,7 @@
               <div class="flex justify-between gap-6">
                 <FormError
                   :errors="
-                    formErrors.fieldError('auto_start_recording_enforced')
+                    formErrors.fieldError('auto_start_recording_default')
                   "
                 />
                 <FormError

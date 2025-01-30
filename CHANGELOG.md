@@ -58,6 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Inconsistent select/multiselect loading states ([#1772])
 - Input fields not disabled correctly on login page ([#1791], [#1794])
 - Style of 'clear' button of the room replacement selector in the 'Delete room type' dialog ([#1784], [#1787])
+- Inconsistent result ordering in tables on equal primary sorting criteria ([#1601], [#1795])
 - Missing form validation feedback for password fields on login page ([#1801])
 - Missing form validation feedback on forgot password page ([#1802])
 - Room limit radio on edit roles page not reset on stale error ([#1824], [#1825])
@@ -362,6 +363,7 @@ You can find the changelog for older versions there [here](https://github.com/TH
 [#1569]: https://github.com/THM-Health/PILOS/pull/1569
 [#1595]: https://github.com/THM-Health/PILOS/pull/1595
 [#1600]: https://github.com/THM-Health/PILOS/pull/1600
+[#1601]: https://github.com/THM-Health/PILOS/issues/1601
 [#1604]: https://github.com/THM-Health/PILOS/pull/1604
 [#1607]: https://github.com/THM-Health/PILOS/issues/1607
 [#1608]: https://github.com/THM-Health/PILOS/pull/1608
@@ -389,6 +391,7 @@ You can find the changelog for older versions there [here](https://github.com/TH
 [#1787]: https://github.com/THM-Health/PILOS/pull/1787
 [#1791]: https://github.com/THM-Health/PILOS/issues/1791
 [#1794]: https://github.com/THM-Health/PILOS/pull/1794
+[#1795]: https://github.com/THM-Health/PILOS/pull/1795
 [#1801]: https://github.com/THM-Health/PILOS/pull/1801
 [#1802]: https://github.com/THM-Health/PILOS/pull/1802
 [#1824]: https://github.com/THM-Health/PILOS/issues/1824

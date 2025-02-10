@@ -72,7 +72,7 @@ You can try to create a file in the shared storage from the BBB-Server and check
 **On the BBB-Server:**
 
 ```bash
-sudo su - bigbluebutton -s /bin/bash -c echo "test" > /mnt/storage/recordings-spool/test.txt
+sudo su - bigbluebutton -s /bin/bash -c "echo 'test' > /mnt/storage/recordings-spool/test.txt"
 ```
 
 **On PILOS:**
@@ -114,11 +114,13 @@ su - bigbluebutton -s /bin/bash -c "nano ~/.ssh/config"
 ```
 Host pilos
     HostName pilos.example.com
+    Port 22
     User pilos-spool
     IdentityFile ~/.ssh/pilos
 ```
 
 This will tell the BBB-Server to use the ssh key and the `pilos-spool` user when connecting to the PILOS server.
+It will also create an alias for the PILOS server, so you can use `pilos` instead of the full hostname.
 
 **On the PILOS server:**
 
@@ -150,7 +152,7 @@ Next make sure permissions are correctly set for the shared storage.
 **On the BBB-Server:**
 
 ```bash
-su - bigbluebutton -s /bin/bash -c "echo "test" > test.txt && rsync --verbose --remove-source-files test.txt dev.pilos-thm.de:/"
+su - bigbluebutton -s /bin/bash -c "echo 'test' > test.txt && rsync --verbose --remove-source-files test.txt pilos:/"
 ```
 
 Notice the `/` at the end of the command, this is the path of the recordings-spool directory on the PILOS server as you restricted the key to only run the rsync command in this directory.
@@ -183,7 +185,7 @@ spool_dir: /mnt/storage/recordings-spool
 If you are using rsync over ssh, you need to set the `spool_dir` setting in the `pilos.yml` file to the rsync destination.
 
 ```yaml
-spool_dir: pilos.example.com:/
+spool_dir: pilos:/
 ```
 
 ### Cleanup

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Greenlight compatibility default_room route ([5c9059b](https://github.com/THM-Health/PILOS/commit/5c9059b54a3707d160f200a0f896679afcbf66d6))
+- Recording documentation ([d6962c4](https://github.com/THM-Health/PILOS/commit/d6962c41130664d75ba8797544442f2f087f84aa), [603fd3d](https://github.com/THM-Health/PILOS/commit/603fd3dca29bc4dd743bae2eafa0ca12c113f509))
+
 ## [v4.3.0] - 2025-02-03
 
 ### Added

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Bump base PHP image to 8.4 ([#1937])
+- Hide locale select in main nav if only one locale is enabled ([#1920])
 
 ### Fixed
 
@@ -17,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Logo height and width in emails ([#1900])
 - Download files with special characters in the filename ([#1960])
 - Close join/start dialog before joining the BBB meeting ([#1940])
+- Allow removing English from the list of enabled locales ([#1919], [#1920])
 
 ## [v4.3.1] - 2025-02-17
 
@@ -422,6 +424,8 @@ You can find the changelog for older versions there [here](https://github.com/TH
 [#1844]: https://github.com/THM-Health/PILOS/pull/1844
 [#1855]: https://github.com/THM-Health/PILOS/pull/1855
 [#1900]: https://github.com/THM-Health/PILOS/pull/1900
+[#1919]: https://github.com/THM-Health/PILOS/issues/1919
+[#1920]: https://github.com/THM-Health/PILOS/pull/1920
 [#1937]: https://github.com/THM-Health/PILOS/pull/1937
 [#1940]: https://github.com/THM-Health/PILOS/pull/1940
 [#1960]: https://github.com/THM-Health/PILOS/pull/1960

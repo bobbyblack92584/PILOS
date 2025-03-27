@@ -90,6 +90,9 @@ COPY ./docker/app/ldap/ /etc/openldap
 # Copy application files
 COPY --chown=www-data:www-data ./ /var/www/html
 
+# Add folder to git safe.directory
+RUN su-exec www-data git config --global --add safe.directory /var/www/html
+
 # Build frontend
 RUN if [ "$VITE_COVERAGE" != "true" ] ; then \
     su-exec www-data npm install --omit=dev && \

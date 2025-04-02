@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/THM-Health/PILOS/4.x/public/images/logo.svg" width="250px"></img>
 
-![Status](https://github.com/THM-Health/PILOS/workflows/CI/badge.svg)
+![Status](https://github.com/THM-Health/PILOS/actions/workflows/ci.yml/badge.svg?branch=4.x)
 [![codecov](https://codecov.io/gh/THM-Health/PILOS/branch/4.x/graph/badge.svg?token=6EXYQKIG3W)](https://codecov.io/gh/THM-Health/PILOS)
 [![snyk.io](https://snyk.io/test/github/THM-Health/PILOS/badge.svg)](https://snyk.io/test/github/THM-Health/PILOS)
 

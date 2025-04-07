@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v4.4.0] - 2025-04-07
+
 ### Changed
 
 - Bump base PHP image to 8.4 ([#1937])
@@ -436,7 +438,7 @@ You can find the changelog for older versions there [here](https://github.com/TH
 [#1960]: https://github.com/THM-Health/PILOS/pull/1960
 [#1988]: https://github.com/THM-Health/PILOS/pull/1988
 [#2015]: https://github.com/THM-Health/PILOS/pull/2015
-[unreleased]: https://github.com/THM-Health/PILOS/compare/v4.3.1...develop
+[unreleased]: https://github.com/THM-Health/PILOS/compare/v4.4.0...develop
 [v3.0.0]: https://github.com/THM-Health/PILOS/releases/tag/v3.0.0
 [v3.0.1]: https://github.com/THM-Health/PILOS/releases/tag/v3.0.1
 [v3.0.2]: https://github.com/THM-Health/PILOS/releases/tag/v3.0.2
@@ -448,3 +450,4 @@ You can find the changelog for older versions there [here](https://github.com/TH
 [v4.2.0]: https://github.com/THM-Health/PILOS/releases/tag/v4.2.0
 [v4.3.0]: https://github.com/THM-Health/PILOS/releases/tag/v4.3.0
 [v4.3.1]: https://github.com/THM-Health/PILOS/releases/tag/v4.3.1
+[v4.4.0]: https://github.com/THM-Health/PILOS/releases/tag/v4.4.0

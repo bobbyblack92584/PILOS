@@ -48,6 +48,7 @@ return [
         'content' => 'Content',
         'country' => 'Country',
         'create_parameters' => 'Additional Create API parameters',
+        'css_file' => 'CSS style file',
         'current_password' => 'Current password',
         'date' => 'Date',
         'day' => 'Day',
@@ -125,6 +126,7 @@ return [
         'room_file_terms_of_use' => 'Terms of use for file download',
         'room_limit' => 'Room limit',
         'room_token_expiration' => 'Expiration time for personalized room links',
+        'streaming_url' => 'RTMP(S) URL',
         'room_type' => 'Room type',
         'search' => 'Search',
         'second' => 'Second',
@@ -137,6 +139,8 @@ return [
         'sort_by' => 'Sort by',
         'status' => 'Status',
         'strength' => 'Server strength',
+        'streaming_pause_image' => 'Pause image',
+        'default_pause_image' => 'Default pause image',
         'theme_favicon' => 'Favicon',
         'theme_favicon_dark' => 'Dark version favicon',
         'theme_favicon_dark_file' => 'Dark version favicon file',
@@ -181,6 +185,16 @@ return [
             'prohibited' => 'The room is not allowed to have an access code because of its room type.',
             'required' => 'The room requires an access code because of its room type.',
         ],
+        'default_pause_image' => [
+            'dimensions' => 'The :attribute must have a resolution of 1920x1080 pixels.',
+        ],
+        'streaming_pause_image_file' => [
+            'dimensions' => 'The :attribute must have a resolution of 1920x1080 pixels.',
+        ],
+        'streaming_url' => [
+            'url' => 'The :attribute must be a RTMP or RTMPS URL.',
+            'required_if_accepted' => 'The :attribute field is required when streaming is enabled.',
+        ],
         'banner' => [
             'array' => 'The message banner settings are missing!',
             'icon' => [
@@ -193,6 +207,9 @@ return [
         ],
         'consent_record_attendance' => [
             'accepted' => 'Consent to the logging of attendance must be given.',
+        ],
+        'consent_streaming' => [
+            'accepted' => 'Consent to the streaming of the video conference must be given.',
         ],
         'invalid_room_type' => 'You have not the necessary permissions to have a room with the passed room type.',
         'locale' => [
@@ -239,13 +256,14 @@ return [
             ],
         ],
     ],
-    'custom_create_parameter_boolean' => 'The :parameter parameter must be true or false.',
-    'custom_create_parameter_enum' => 'The :parameter parameter value is not in the list of allowed values.',
-    'custom_create_parameter_integer' => 'The :parameter parameter must be an integer.',
-    'custom_create_parameter_invalid' => 'The :parameter parameter value is invalid.',
-    'custom_create_parameter_missing' => 'The :parameter parameter is missing a value.',
-    'custom_create_parameter_not_found' => 'The :parameter parameter does not exist.',
+    'custom_parameter_boolean' => 'The :parameter parameter must be true or false.',
+    'custom_parameter_enum' => 'The :parameter parameter value is not in the list of allowed values.',
+    'custom_parameter_integer' => 'The :parameter parameter must be an integer.',
+    'custom_parameter_invalid' => 'The :parameter parameter value is invalid.',
+    'custom_parameter_missing' => 'The :parameter parameter is missing a value.',
+    'custom_parameter_not_found' => 'The :parameter parameter does not exist.',
     'custom_create_parameter_other_error' => 'The custom create parameters are invalid.',
+    'custom_join_parameter_other_error' => 'The custom join parameters are invalid.',
     'date' => 'The :attribute is not a valid date.',
     'date_equals' => 'The :attribute must be a date equal to :date.',
     'date_format' => 'The :attribute does not match the format :format.',

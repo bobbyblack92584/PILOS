@@ -51,7 +51,7 @@ return [
 
     'whitelabel' => (bool) env('WHITELABEL', false),
 
-    'hide_disabled_features' => (bool) env('HIDE_DISABLED_FEATURES', false),
+    'hide_disabled_features' => (bool) env('HIDE_DISABLED_FEATURES', true),
 
     /*
     |--------------------------------------------------------------------------

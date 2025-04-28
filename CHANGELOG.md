@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Transition and animation for dark mode toggle ([#2082])
 - Logo for dark mode in BBB ([#1399])
 - Livestreaming BigBlueButton meetings to an RTMP endpoint via the [BBB-Streaming-Server](https://github.com/THM-Health/BBB-Streaming-Server) ([#1697])
+- Persian/Farsi locale
 
 ### Fixed
 

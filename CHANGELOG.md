@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v4.5.0] - 2025-05-02
+
 ### Added
 
 - Environment variable `MAIL_AUTO_TLS` to disable automatic TLS for SMTP servers with STARTTLS support ([#2033])
@@ -468,7 +470,7 @@ You can find the changelog for older versions there [here](https://github.com/TH
 [#2065]: https://github.com/THM-Health/PILOS/pull/2065
 [#2079]: https://github.com/THM-Health/PILOS/pull/2079
 [#2082]: https://github.com/THM-Health/PILOS/pull/2082
-[unreleased]: https://github.com/THM-Health/PILOS/compare/v4.4.0...develop
+[unreleased]: https://github.com/THM-Health/PILOS/compare/v4.5.0...develop
 [v3.0.0]: https://github.com/THM-Health/PILOS/releases/tag/v3.0.0
 [v3.0.1]: https://github.com/THM-Health/PILOS/releases/tag/v3.0.1
 [v3.0.2]: https://github.com/THM-Health/PILOS/releases/tag/v3.0.2
@@ -481,3 +483,4 @@ You can find the changelog for older versions there [here](https://github.com/TH
 [v4.3.0]: https://github.com/THM-Health/PILOS/releases/tag/v4.3.0
 [v4.3.1]: https://github.com/THM-Health/PILOS/releases/tag/v4.3.1
 [v4.4.0]: https://github.com/THM-Health/PILOS/releases/tag/v4.4.0
+[v4.5.0]: https://github.com/THM-Health/PILOS/releases/tag/v4.5.0

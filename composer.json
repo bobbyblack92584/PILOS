@@ -33,7 +33,7 @@
     "spatie/laravel-csp": "^3.4",
     "spatie/laravel-ignition": "^2.0",
     "spatie/laravel-settings": "^3.3",
-    "symfony/var-exporter": "^7.0",
+    "symfony/var-exporter": "^8.0",
     "ext-redis": "*"
   },
   "require-dev": {
